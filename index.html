@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="按市场查阅金融指标的定义、单位、算式与出处。">
+  <title>市场参数手册</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="catalog.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#catalog">跳到词条目录</a>
+
+  <header class="masthead page">
+    <div>
+      <h1>市场参数手册</h1>
+      <p>金融行情里的名词、单位和算式。</p>
+    </div>
+    <form id="search-form" class="search" role="search">
+      <label class="visually-hidden" for="term-search">搜索参数名称、英文名或缩写</label>
+      <span class="magnifier" aria-hidden="true"></span>
+      <input id="term-search" type="search" placeholder="查词条，如 P/E、点差" autocomplete="off" aria-keyshortcuts="/" aria-controls="entries" enterkeyhint="search">
+      <kbd id="search-key" aria-hidden="true">/</kbd>
+      <button id="clear-search" class="clear-search" type="button" aria-label="清空搜索" hidden>×</button>
+    </form>
+  </header>
+
+  <main class="page">
+    <nav class="browse-bar" aria-label="市场分类">
+      <div id="market-filters" class="market-filters" role="group" aria-label="选择市场"></div>
+      <p id="result-count" role="status" aria-live="polite" aria-atomic="true"></p>
+    </nav>
+
+    <div class="spread">
+      <aside class="worksheet" aria-label="债券算例">
+        <details class="lesson" id="bond-example" open>
+          <summary>
+            <span class="lesson-thumbnail" aria-hidden="true"></span>
+            <span class="lesson-name">一张债券的两种利率</span>
+            <span class="chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="lesson-body">
+            <figure class="specimen">
+              <div class="specimen-window">
+                <img src="assets/longhai-bond-1923.jpg" alt="债券票面局部，印有 1923 年、8% 票息和紫色印章。" width="698" height="913">
+              </div>
+              <figcaption>
+                <span>1923 年陇海铁路债券，票面局部</span>
+                <a href="https://commons.wikimedia.org/wiki/File:Government_of_the_Republic_of_China_Treasury_Bond_(8%25_on_500_francs)_of_1923,_for_the_Lung-Hsing-U-Hai_Railway_(BM_2014,4050.1,_donated_by_Dirk_Booms).png" target="_blank" rel="noopener noreferrer">图源</a>
+              </figcaption>
+            </figure>
+            <p class="premise">取面值 <b id="face-value">100</b> 元、年票息 <b id="annual-coupon">4</b> 元试算。拖动市价，看两种利率怎样变化。</p>
+            <dl class="rates">
+              <div>
+                <dt>票面利率</dt>
+                <dd class="rate"><span id="coupon-rate">4.00</span><small>%</small></dd>
+                <dd class="division" id="coupon-division">4 ÷ 100（面值）</dd>
+              </div>
+              <div>
+                <dt>当期收益率</dt>
+                <dd class="rate variable"><output id="current-yield" for="bond-price">4.44</output><small>%</small></dd>
+                <dd class="division" id="current-division">4 ÷ 90（市价）</dd>
+              </div>
+            </dl>
+            <div class="price-label">
+              <label for="bond-price">债券市价</label>
+              <output id="price-value" for="bond-price">90 元</output>
+            </div>
+            <div class="price-scale">
+              <input id="bond-price" type="range" min="80" max="120" step="1" value="90" aria-valuetext="90 元">
+              <div class="scale-labels" aria-hidden="true"><span>80 元</span><span>面值 100 元</span><span>120 元</span></div>
+            </div>
+          </div>
+        </details>
+      </aside>
+
+      <section class="catalog" id="catalog" tabindex="-1" aria-labelledby="catalog-title">
+        <h2 id="catalog-title" class="visually-hidden">参数索引</h2>
+        <noscript><p>请启用 JavaScript，以浏览词条、搜索参数和调整算例。</p></noscript>
+        <div id="entries"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <h3>没有找到这个词条</h3>
+          <p>可以换个关键词，或到全部市场里查。</p>
+          <button type="button" id="reset-filters">查看全部参数</button>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="page footer">
+    <span>词条里的价格、仓位与收益均为教学算例。</span>
+    <a href="#term-search">回到搜索</a>
+  </footer>
+
+  <template id="term-template">
+    <details class="term">
+      <summary class="term-row">
+        <span class="term-heading">
+          <span class="term-name"><strong data-field="name"></strong><span class="symbol" data-field="symbol" lang="en"></span></span>
+          <span class="english" data-field="english" lang="en"></span>
+        </span>
+        <span class="formula-preview" data-field="formula"></span>
+        <span class="unit" data-field="unit"></span>
+        <span class="chevron" aria-hidden="true"></span>
+      </summary>
+      <div class="term-body">
+        <p class="question" data-field="question"></p>
+        <p class="meaning" data-field="meaning"></p>
+        <dl class="notes">
+          <div><dt>算例</dt><dd data-field="example"></dd></div>
+          <div><dt>读数提示</dt><dd data-field="note"></dd></div>
+        </dl>
+        <p class="reference">出处 <a class="source" target="_blank" rel="noopener noreferrer"></a></p>
+      </div>
+    </details>
+  </template>
+</body>
+</html>
