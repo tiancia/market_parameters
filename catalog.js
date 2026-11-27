@@ -16,6 +16,10 @@ const sources = {
     label: "富达投教《Management and Growth Ratios》",
     url: "https://www.fidelity.com/learning-center/trading-investing/fundamental-analysis/management-growth-ratios",
   },
+  valuationRatios: {
+    label: "富达投教《Company Valuation Ratios》",
+    url: "https://www.fidelity.com/learning-center/trading-investing/fundamental-analysis/company-valuation-ratios",
+  },
   movingAverage: {
     label: "富达技术指标指南《Simple Moving Average》",
     url: "https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/sma",
@@ -23,6 +27,22 @@ const sources = {
   relativeStrength: {
     label: "StockCharts ChartSchool《Relative Strength Index》",
     url: "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/relative-strength-index-rsi",
+  },
+  exponentialAverage: {
+    label: "StockCharts ChartSchool 关于简单与指数移动平均线的计算说明",
+    url: "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-overlays/moving-averages-simple-and-exponential",
+  },
+  technicalFactors: {
+    label: "同花顺《技术因子》计算说明",
+    url: "https://quant.10jqka.com.cn/view/dataplatform/detail/285",
+  },
+  bollingerBands: {
+    label: "约翰·布林格关于布林带的计算说明",
+    url: "https://www.bollingerbands.com/bollinger-bands",
+  },
+  averageTrueRange: {
+    label: "富达技术指标指南《Average True Range》",
+    url: "https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/atr",
   },
   coupon: {
     label: "中国投资者网《债券市场基本知识》（PDF）",
@@ -44,6 +64,10 @@ const sources = {
     label: "CFA Institute《Yield-Based Bond Duration Measures and Properties》",
     url: "https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/yield-based-bond-duration-measures-and-properties",
   },
+  macaulayDuration: {
+    label: "CFA Institute《Interest Rate Risk and Return》",
+    url: "https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/interest-rate-risk-and-return",
+  },
   creditSpread: {
     label: "旧金山联储《What Determines the Credit Spread?》",
     url: "https://fraser.stlouisfed.org/title/economic-letter-federal-reserve-bank-san-francisco-4960/determines-credit-spread-633273/fulltext",
@@ -51,6 +75,10 @@ const sources = {
   treasurySpread: {
     label: "圣路易斯联储 FRED 的 10 年期与 2 年期美国国债利差",
     url: "https://fred.stlouisfed.org/series/T10Y2Y",
+  },
+  breakevenInflation: {
+    label: "圣路易斯联储 FRED 的美国 10 年期盈亏平衡通胀率",
+    url: "https://fred.stlouisfed.org/series/T10YIE",
   },
   nav: {
     label: "美国证监会 Investor.gov《Net Asset Value》",
@@ -88,6 +116,18 @@ const sources = {
     label: "Vanguard 关于基准相对收益及跟踪误差的说明",
     url: "https://workplace.vanguard.com/insights-and-research/perspective/vanguards-approach-to-target-date-fund-rebalancing.html",
   },
+  fundAlphaBeta: {
+    label: "晨星《MPT Statistics》阿尔法与贝塔计算方法（PDF）",
+    url: "https://morningstardirect.morningstar.com/clientcomm/Morningstar_Methodology_MPT_Statistics.pdf",
+  },
+  informationRatio: {
+    label: "挪威央行投资管理部门《GIPS Manual》信息比率计算说明（PDF）",
+    url: "https://www.nbim.no/contentassets/9d31252607434303a4e6a590fa6da110/norges-bank-investment-management-gips-manual-2016.pdf",
+  },
+  fundTurnover: {
+    label: "美国证监会 Form N-1A 的投资组合换手率填报说明（PDF）",
+    url: "https://www.sec.gov/about/forms/form-n-1a.pdf",
+  },
   currencyPair: {
     label: "OANDA《Trade Currency Pairs》",
     url: "https://www.oanda.com/us-en/trading/instruments/",
@@ -103,6 +143,18 @@ const sources = {
   pipValue: {
     label: "OANDA 帮助中心的 EUR/USD 点值示例",
     url: "https://help.oanda.com/us/en/faqs/spreads-commission.htm",
+  },
+  forexLots: {
+    label: "OANDA 帮助中心关于外汇手数与基础货币单位的说明",
+    url: "https://help.oanda.com/us/en/faqs/micro-lots.htm",
+  },
+  forexProfitLoss: {
+    label: "OANDA《Calculating Profit and Loss》",
+    url: "https://www.oanda.com/us-en/trading/how-calculate-profit-loss/",
+  },
+  effectiveLeverage: {
+    label: "FXCM 关于实际杠杆倍数的计算说明",
+    url: "https://www.fxcm.com/au/insights/effective-leverage/",
   },
   midMarketRate: {
     label: "Wise 帮助中心关于市场中间汇率的说明",
@@ -144,6 +196,14 @@ const sources = {
     label: "中国投资者网《期货合约与交易制度等基础知识》（PDF）",
     url: "https://www.investor.org.cn/learning_center/gmjytx/yjs/kj/jyxl/202302/P020230222409539346334.pdf",
   },
+  maintenanceMargin: {
+    label: "CME Group《Margin: Know What's Needed》",
+    url: "https://www.cmegroup.com/education/courses/introduction-to-futures/margin-know-what-is-needed",
+  },
+  futuresPriceLimits: {
+    label: "证监会《证券期货业基础数据元规范 第 1 部分》涨跌停板幅度说明（PDF）",
+    url: "https://www.sse.com.cn/lawandrules/regulations/csrcannoun/c/10762077/files/3c33410d147d48099683de3865fd9b21.pdf",
+  },
   marketCap: {
     label: "CoinGecko《What Is Market Cap in Crypto?》",
     url: "https://www.coingecko.com/learn/what-is-market-cap-in-crypto",
@@ -180,6 +240,18 @@ const sources = {
     label: "以太坊开发者文档《Gas 和费用》",
     url: "https://ethereum.org/zh/developers/docs/gas/",
   },
+  cryptoAllTimeHigh: {
+    label: "CoinGecko 关于现价距历史最高价跌幅的统计",
+    url: "https://www.coingecko.com/en/highlights/all-time-high-crypto",
+  },
+  orderBookDepth: {
+    label: "Kaiko 开发者文档关于订单簿深度的计算示例",
+    url: "https://docs.kaiko.com/getting-started/kaiko-examples/compare-market-depth-between-exchanges",
+  },
+  stablecoinPeg: {
+    label: "标普全球《Stablecoins: A Deep Dive into Valuation and Depegging》",
+    url: "https://www.spglobal.com/en/research-insights/special-reports/stablecoins-a-deep-dive-into-valuation-and-depegging",
+  },
 };
 
 const markets = [
@@ -203,6 +275,15 @@ const markets = [
         example: "同一类普通股的股价为 12 元，每股净资产为 8 元，市净率为 1.5 倍。",
         note: "资产的账面价值与出售时能收到的钱可能相差很大。比较时还要看行业和报表日期。",
         source: "stockStats",
+      },
+      {
+        name: "市销率", english: "Price-to-sales ratio", symbol: "P/S", aliases: "PS 市售率 市销比",
+        question: "过去一年每 1 元营业收入，对应多少股票市值？", unit: "倍",
+        meaning: "把公司全部普通股的市值与最近 12 个月的营业收入相比。即使公司当期亏损，只要有收入，也能计算这个倍数。",
+        formula: "滚动市销率 = 股票总市值 ÷ 最近 12 个月营业收入",
+        example: "公司总市值为 30 亿元，最近四个季度合计收入 12 亿元，市销率为 30 ÷ 12 = 2.5 倍。",
+        note: "两家公司即使市销率相同，每 1 元收入最终能留下的利润也可能不同。可结合毛利率一起看。",
+        source: "valuationRatios",
       },
       {
         name: "股息率", english: "Dividend yield",
@@ -295,6 +376,15 @@ const markets = [
         source: "returnOnEquity",
       },
       {
+        name: "毛利率", english: "Gross profit margin", aliases: "销售毛利率 营业毛利率 GrossMargin",
+        question: "每 100 元营业收入，扣掉对应的营业成本后还剩多少？", unit: "%",
+        meaning: "营业收入减去同期营业成本得到毛利。把毛利换算成收入的百分比，就能比较收入规模不同的公司或产品。",
+        formula: "毛利率 =（营业收入 − 营业成本）÷ 营业收入 × 100%",
+        example: "公司收入 8000 万元，营业成本 5200 万元，毛利率为 2800 ÷ 8000 = 35%。每 100 元收入留下 35 元毛利。",
+        note: "从毛利到净利润，还要计入销售和管理费用、财务费用、所得税等项目。跨公司比较时要核对成本归类。",
+        source: "returnOnEquity",
+      },
+      {
         name: "简单移动平均线", english: "Simple moving average", symbol: "SMA", aliases: "MA 均线 五日均线 MA5 MA20 移动均线",
         question: "最近几个交易日的平均收盘价是多少？", unit: "货币 / 股",
         meaning: "选定一个固定窗口，每个收盘价的权重相同。每增加一个交易日，就移出最早的一个收盘价。",
@@ -304,6 +394,42 @@ const markets = [
         source: "movingAverage",
       },
       {
+        name: "指数移动平均线", english: "Exponential moving average", symbol: "EMA", aliases: "指数均线 指数加权移动平均线 EXPMA EMA9 EMA12 EMA26",
+        question: "给最新收盘价更多权重后，均价会移动多少？", unit: "货币 / 股",
+        meaning: "常用算法先用最初 N 期收盘价的简单平均值作起点。此后每期用新收盘价更新上期均线，早期价格的权重逐步减小。",
+        formula: "本期 EMA = 上期 EMA + 2 ÷ (N + 1) ×（本期收盘价 − 上期 EMA）",
+        example: "9 日 EMA 上期为 20 元，今天收在 23 元。新价格权重为 2 ÷ 10，新均线为 20 + 0.2 × 3 = 20.60 元。",
+        note: "周期、起算日期和初值都会影响读数。比较两套行情里的 EMA 时，要对齐这三项和复权方式。",
+        source: "exponentialAverage",
+      },
+      {
+        name: "指数平滑异同移动平均线", english: "Moving average convergence divergence", symbol: "MACD", aliases: "平滑异同移动平均线 指数平滑异同平均线 DIF DIFF DEA MACD柱",
+        question: "快、慢两条均线相差多少？这个差距比近期平均更大还是更小？", unit: "货币 / 股",
+        meaning: "常用日线参数为 12、26、9。先取收盘价的 12 日与 26 日 EMA 之差得到 DIF，再对 DIF 求 9 日 EMA 得到信号线 DEA。",
+        formula: "DIF = EMA12 − EMA26，DEA = DIF 的 9 日 EMA，同花顺口径的柱值 = 2 × (DIF − DEA)",
+        example: "12 日 EMA 为 21.40 元，26 日 EMA 为 20.80 元，DIF 为 0.60 元。若 DEA 为 0.40 元，柱值为 2 × (0.60 − 0.40) = 0.40 元。",
+        note: "有些图表直接用 DIF 减 DEA 画柱，同一组数据会显示 0.20 元。两种画法的柱子同时穿过零线。",
+        source: "technicalFactors",
+      },
+      {
+        name: "布林带", english: "Bollinger Bands", symbol: "BOLL", aliases: "布林线 保利加通道 BB BBANDS 上轨 下轨",
+        question: "按近期收盘价的波动，均线上下两条轨道各在哪里？", unit: "货币 / 股",
+        meaning: "按布林格的默认设置，中轨取最近 20 期收盘价的简单均值，上下轨距中轨各两个标准差。标准差取同一组收盘价，方差的分母为 20。",
+        formula: "中轨 = 20 期简单均线，上轨 = 中轨 + 2 × 标准差，下轨 = 中轨 − 2 × 标准差",
+        example: "20 日均价 50 元，这 20 个收盘价的总体标准差为 1.50 元。上下轨各距均价 3 元，分别为 53 元和 47 元。",
+        note: "收盘价越分散，轨道越宽。即使均价相同，两个时段的上下轨也可能相差很大。",
+        source: "bollingerBands",
+      },
+      {
+        name: "平均真实波幅", english: "Average true range", symbol: "ATR", aliases: "平均真实波动幅度 平均真实范围 真实波幅 TR ATR14",
+        question: "把跳空也计入后，股价每期通常波动多少元？", unit: "货币 / 股",
+        meaning: "把当天最高价、最低价和前收盘价放在一起，最大值减最小值就是真实波幅 TR。14 期 Wilder 算法先取最初 14 个 TR 的均值，再逐期平滑。",
+        formula: "14 期 ATR =（上期 ATR × 13 + 本期 TR）÷ 14",
+        example: "前收 50 元，今天在 53 至 55 元间成交，TR 为 55 − 50 = 5 元。上期 ATR 为 2.20 元，本期为 (2.20 × 13 + 5) ÷ 14 = 2.40 元。",
+        note: "向上和向下跳空都可能推高 ATR。跨不同价位的股票比较时，可以再除以各自的收盘价换算成百分比。",
+        source: "averageTrueRange",
+      },
+      {
         name: "相对强弱指数", english: "Relative strength index", symbol: "RSI", aliases: "相对强度指数 强弱指标 RSI14",
         question: "近期股价变动中，上涨的力度占多大比重？", unit: "0–100",
         meaning: "逐日把涨跌分开记录，未发生的一项记零，跌额取正值。Wilder 的 14 期算法先分别取 14 期均值，以后用（上期均值 × 13 + 本期金额）÷ 14 更新各自的均值。",
@@ -311,6 +437,15 @@ const markets = [
         example: "平滑后的平均涨额为 0.60 元，平均跌额为 0.40 元，RSI 为 100 × 0.60 ÷ 1.00 = 60。",
         note: "单边上涨时可达到 100，单边下跌时可达到 0。两项平均值同时为零时，要查看行情软件的处理约定。",
         source: "relativeStrength",
+      },
+      {
+        name: "随机指标", english: "KDJ stochastic oscillator", symbol: "KDJ", aliases: "随机指数 随机摆动指标 RSV 随机值",
+        question: "今天收盘靠近最近九天价格区间的哪一端？", unit: "指标点",
+        meaning: "常用的 (9, 3, 3) 先算收盘价在九日区间的位置，记为 RSV。RSV = 100 ×（收盘价 − 九日最低价）÷（九日最高价 − 九日最低价），再逐日更新 K、D、J。",
+        formula: "K =（2 × 上期 K + RSV）÷ 3，D =（2 × 上期 D + 本期 K）÷ 3，J = 3 × 本期 K − 2 × 本期 D",
+        example: "九日最高 20 元、最低 10 元，今天收在 19.50 元，RSV 为 95。若上期 K、D 都为 50，本期 K 为 65，D 为 55，J 为 85。",
+        note: "J 放大了 K 与 D 的差距，可以高于 100 或低于 0。九日最高价等于最低价时，RSV 的分母为零，需核对行情软件的处理方式。",
+        source: "technicalFactors",
       },
     ],
   },
@@ -372,12 +507,30 @@ const markets = [
         source: "bondPricing",
       },
       {
+        name: "麦考利久期", english: "Macaulay duration", symbol: "Dmac", aliases: "麦考莱久期 麦氏久期 马考勒久期 加权平均收款时间",
+        question: "把每笔未来本息按今天的价值加权，平均要等几年收到？", unit: "年",
+        meaning: "先用同一到期收益率折现每笔约定本息。某笔现金流现值占债券全价的比例，就是这笔收款时间的权重。",
+        formula: "麦考利久期 = 各笔（距收款的年数 × 本息现值）之和 ÷ 全部本息现值之和",
+        example: "债券只剩两笔付款，一年后票息的现值为 4 元，两年后本息的现值为 96 元。麦考利久期为 (1 × 4 + 2 × 96) ÷ 100 = 1.96 年。",
+        note: "若是到期才一次还本的零息债，全部权重都落在到期日，麦考利久期就等于剩余年限。",
+        source: "macaulayDuration",
+      },
+      {
         name: "修正久期", english: "Modified duration", symbol: "Dmod", aliases: "利率敏感度 修正存续期 久期",
         question: "到期收益率小幅变化，债券价格大约会动多少？", unit: "年",
         meaning: "麦考利久期是按各期本息现值加权的平均收款时间。对现金流固定的债券，用每个付息期的收益率调整它，就能估计价格对收益率的敏感程度。",
         formula: "修正久期 = 麦考利久期 ÷（1 + 每个付息期的到期收益率）",
         example: "某债券每年付息一次，麦考利久期为 4.2 年，到期收益率为 5%，修正久期为 4.2 ÷ 1.05 = 4 年。收益率若再升 25 bp，价格约下跌 4 × 0.0025 = 1%。",
         note: "价格相对变动约等于负的修正久期乘以收益率变动，收益率按年、以小数代入。变动较大时，还要考虑价格曲线的弯曲程度。",
+        source: "bondDuration",
+      },
+      {
+        name: "基点价值", english: "Price value of a basis point", symbol: "DV01", aliases: "PVBP PV01 BPV 基点现值 基点价格价值 Dollar value of a basis point",
+        question: "到期收益率移动 1 个基点，这笔债券持仓约变动多少钱？", unit: "货币 / bp",
+        meaning: "对现金流固定的债券多头，用修正久期把收益率的微小变动换算成持仓金额的变化。这里用正数报告变动的大小。",
+        formula: "DV01 ≈ 持仓全价市值 × 修正久期 × 0.0001",
+        example: "债券持仓全价市值 200 万元，修正久期为 4 年，DV01 约为 2,000,000 × 4 × 0.0001 = 800 元/bp。收益率上升 1 bp，多头市值约减少 800 元。",
+        note: "有的平台按每百元面值报价，有的按整笔持仓报告。相加或比较前，先核对名义本金、币种和正负号约定。",
         source: "bondDuration",
       },
       {
@@ -397,6 +550,15 @@ const markets = [
         example: "10 年期收益率为 2.50%，2 年期为 2.80%，期限利差为 −0.30 个百分点，即 −30 bp，这两个期限之间出现倒挂。",
         note: "记下选用的两个期限。10 年减 2 年与 10 年减 3 个月可能给出不同读数。",
         source: "treasurySpread",
+      },
+      {
+        name: "盈亏平衡通胀率", english: "Breakeven inflation rate", symbol: "BEI", aliases: "盈亏平衡通货膨胀率 损益平衡通胀率 隐含通胀率 通胀预期 T10YIE",
+        question: "同期限的普通国债与通胀保值国债之间，市场给通胀定了多少价？", unit: "% / 年",
+        meaning: "以美国 10 年期为例，FRED 用同一天的名义国债收益率减去通胀保值国债（TIPS）的实际收益率，衡量市场给未来十年平均通胀的定价。",
+        formula: "10 年期盈亏平衡通胀率 = 10 年期名义国债收益率 − 10 年期 TIPS 实际收益率",
+        example: "10 年期名义收益率为 4.20%，同期 TIPS 实际收益率为 1.70%，隐含的年平均通胀率为 2.50%。",
+        note: "通胀风险补偿和两类债券的流动性都会影响利差。与实际通胀比较时，也要对齐期限。",
+        source: "breakevenInflation",
       },
     ],
   },
@@ -493,6 +655,42 @@ const markets = [
         note: "比较时对齐币种和分红口径。要看这段差距在不同时期是否稳定，可查“跟踪误差”。",
         source: "trackingDifference",
       },
+      {
+        name: "贝塔系数", english: "Beta", symbol: "β", aliases: "贝塔值 贝他系数 贝塔 系统性风险",
+        question: "基准的超额收益每变动 1 个百分点，基金的超额收益通常跟着变动多少？", unit: "无量纲",
+        meaning: "按晨星口径，先把基金和基准的月收益率各自减去同月无风险收益率，再用两组超额收益估算回归斜率 β。",
+        formula: "β = 基金与基准月超额收益率的协方差 ÷ 基准月超额收益率的方差",
+        example: "三个月里，基准超额收益率依次为 −1%、0%、1%，基金为 −1.2%、0%、1.2%。这三组数的回归斜率为 1.2。",
+        note: "更换基准或观察期会改变 β。基准超额收益始终相同时方差为零，无法用这组数据估计斜率。",
+        source: "fundAlphaBeta",
+      },
+      {
+        name: "詹森阿尔法", english: "Jensen's alpha", symbol: "α", aliases: "阿尔法系数 阿尔法值 詹森指数 JensenAlpha Alpha",
+        question: "扣除无风险收益和基准波动能解释的部分后，基金每月平均还多赚多少？", unit: "% / 月",
+        meaning: "按单一基准模型，先把基金和基准每月的收益率分别减去当月无风险收益率。用同一段历史估计的贝塔系数衡量基金对基准的敏感度。",
+        formula: "月度 α = 基金月超额收益率均值 − β × 基准月超额收益率均值",
+        example: "基金与基准扣除无风险收益后的月均收益率分别为 1.20% 和 0.80%，β 为 1.2。月度 α 为 1.20% − 1.2 × 0.80% = 0.24%。",
+        note: "基金若主要投资小盘股，使用大盘指数和小盘指数估计的 α 可能不同。比较前要对齐基准和收益频率。",
+        source: "fundAlphaBeta",
+      },
+      {
+        name: "信息比率", english: "Information ratio", symbol: "IR", aliases: "信息比 主动风险调整收益",
+        question: "基金每承担一份偏离基准的波动，平均取得多少主动收益？", unit: "无量纲",
+        meaning: "每期用基金总收益率减去同期基准总收益率，得到主动收益率。按算术平均口径，把主动收益均值和它的标准差换算到相同的年化尺度后相除。",
+        formula: "年化 IR = 年化算术平均主动收益率 ÷ 年化跟踪误差",
+        example: "基金的年化算术平均主动收益率为 3%，同一期间的年化跟踪误差为 4%，信息比率为 3% ÷ 4% = 0.75。",
+        note: "信息比率以所选基准衡量超额表现，夏普比率以无风险利率为参照。跟踪误差为零时，信息比率没有定义。",
+        source: "informationRatio",
+      },
+      {
+        name: "基金组合换手率", english: "Portfolio turnover rate", aliases: "基金换手率 投资组合换手率 持仓换手率",
+        question: "一个财年里，基金买卖证券的金额相当于持仓规模的多少？", unit: "%",
+        meaning: "按美国基金 Form N-1A 的披露口径，取全年买入总额与卖出总额中较小的一项，与组合证券平均价值相比。平均值取年初及 12 个月末共 13 个估值点。",
+        formula: "年度组合换手率 = 买入额与卖出额中的较小值 ÷ 组合证券平均价值 × 100%",
+        example: "纳入统计的证券全年买入 8000 万元、卖出 6000 万元，平均持仓价值 1.5 亿元。换手率取 6000 ÷ 15,000 = 40%。",
+        note: "在这一口径下，买入时剩余期限不超过一年的证券从买卖额和平均持仓中同时剔除。比较基金时要核对披露规则。",
+        source: "fundTurnover",
+      },
     ],
   },
   {
@@ -533,6 +731,33 @@ const markets = [
         example: "持有 10,000 欧元的 EUR/USD 头寸，1 pip 的点值为 10,000 × 0.0001 = 1 美元。",
         note: "如果账户以另一种货币计价，还要把这笔点值按相应汇率折算到账户货币。",
         source: "pipValue",
+      },
+      {
+        name: "外汇标准手", english: "Standard lot", aliases: "外汇手数 标准手数 迷你手 微型手 MiniLot MicroLot LotSize",
+        question: "EUR/USD 报单里的 0.25 手，实际代表多少欧元？", unit: "基础货币 / 手",
+        meaning: "在每标准手 10 万单位的外汇报价中，手数按货币对左侧的基础货币计算。1 迷你手为 1 万单位，1 微型手为 1000 单位。",
+        formula: "基础货币数量 = 标准手数 × 100,000",
+        example: "EUR/USD 的 0.25 标准手代表 25,000 欧元。按 1 欧元兑 1.0800 美元换算，名义金额为 27,000 美元。",
+        note: "有的平台可以直接按基础货币单位下单。输入数量时先看栏位写的是“手”还是“单位”。",
+        source: "forexLots",
+      },
+      {
+        name: "外汇平仓盈亏", english: "Realized forex profit and loss", aliases: "外汇交易盈亏 汇兑损益 外汇损益 已实现盈亏 P&L PnL",
+        question: "买入一笔外汇再卖出，汇率变化折成报价货币是多少钱？", unit: "报价货币",
+        meaning: "对固定数量的外汇多头，把每单位基础货币的实际买卖价差乘以平仓数量，得到扣除单列费用前的交易盈亏。",
+        formula: "多头盈亏 =（平仓卖价 − 开仓买价）× 基础货币数量，空头用开仓卖价减平仓买价",
+        example: "以 1.0802 买入 10,000 欧元，再以 1.0840 全部卖出。按这两笔 EUR/USD 成交价计算，盈利为 0.0038 × 10,000 = 38 美元。",
+        note: "实际买卖价已体现点差。核对账户净收益时，还要计入佣金、隔夜融资费用，以及换算到账户币种时使用的汇率。",
+        source: "forexProfitLoss",
+      },
+      {
+        name: "实际杠杆倍数", english: "Effective leverage", aliases: "实际杠杆 有效杠杆 账户杠杆 头寸杠杆",
+        question: "这笔外汇仓位的名义价值相当于账户净值的几倍？", unit: "倍",
+        meaning: "以只有一笔未平仓交易的账户为例，按当前汇率把仓位价值折成账户币种，再除以包含浮动盈亏的账户净值。",
+        formula: "单一仓位的实际杠杆 = 仓位名义价值的绝对值 ÷ 账户净值（同币种）",
+        example: "美元账户净值为 5500 美元，持有 2 万欧元的 EUR/USD 多头。按 1.10 换算，仓位值 22,000 美元，实际杠杆为 4 倍。",
+        note: "平台允许的最高杠杆相同，仓位大小仍可不同。仓位名义价值不变时，账户净值下降也会推高实际杠杆。",
+        source: "effectiveLeverage",
       },
       {
         name: "买卖报价中间价", english: "Mid-market exchange rate", aliases: "中间汇率 中间价 中间报价 mid midpoint",
@@ -648,6 +873,15 @@ const markets = [
         source: "settlementPrice",
       },
       {
+        name: "期货涨跌停板价", english: "Daily futures price limits", aliases: "涨停价 跌停价 涨停板 跌停板 涨跌停板幅度 价格限制 LimitUp LimitDown",
+        question: "按今天适用的涨跌幅限制，这份合约最高和最低能报到多少？", unit: "货币 / 实物单位",
+        meaning: "对以上一交易日结算价为基准、上下限幅度相等的商品期货合约，将结算价分别向上和向下调整规定的百分比。",
+        formula: "涨停价 = 前结算价 × (1 + 限幅)，跌停价 = 前结算价 × (1 − 限幅)",
+        example: "昨日结算价为 5000 元/吨，假设今日限幅为 5%，算得涨停价为 5250 元/吨，跌停价为 4750 元/吨，两者都落在有效报价档位。",
+        note: "实际限幅和档位取整按合约当日规则执行。用昨收盘价代替昨结算价，算出的边界可能不同。",
+        source: "futuresPriceLimits",
+      },
+      {
         name: "交易保证金", english: "Futures margin", aliases: "期货保证金 开仓保证金 保证金比例 保证金率",
         question: "按给定的保证金比例，开这笔期货仓位要占用多少钱？", unit: "货币",
         meaning: "在按合约价值的一定比例收取保证金的市场，单笔线性合约头寸可用开仓名义价值估算初始占用。",
@@ -655,6 +889,15 @@ const markets = [
         example: "按 6000 元/吨开仓 2 手，每手 5 吨，假设适用保证金比例为 8%，占用 6000 × 5 × 2 × 8% = 4800 元。",
         note: "持仓到结算时，计价基础和适用比例都可能变化。期货公司的客户保证金标准也可能高于交易所标准。",
         source: "futuresSettlement",
+      },
+      {
+        name: "维持保证金", english: "Maintenance margin", aliases: "最低维持保证金 维持担保金 追加保证金 追保 MarginCall",
+        question: "持仓至少需保有多少账户权益，跌破后可能要补多少？", unit: "货币",
+        meaning: "维持保证金是继续持仓所需的最低权益。以 CME 的保证金说明为例，权益跌破维持标准后，经纪商可能要求把账户补回初始保证金水平。",
+        formula: "单一合约维持保证金 = 每手维持标准 × 持仓手数",
+        example: "持有 2 手，每手初始保证金 4000 美元、维持保证金 3000 美元，维持门槛为 6000 美元。若权益跌至 5700 美元并被要求补回初始水平，需补 8000 − 5700 = 2300 美元。",
+        note: "这里按每手固定金额计算。经纪商的客户标准、组合抵扣和仓位处置规则都会影响实际要求。",
+        source: "maintenanceMargin",
       },
       {
         name: "逐日盯市盈亏", english: "Mark-to-market profit and loss", symbol: "MTM", aliases: "每日盯市 每日盈亏 当日盈亏 结算盈亏",
@@ -750,6 +993,33 @@ const markets = [
         example: "实际消耗 21,000 Gas，基础费为 12 Gwei/Gas，实际优先费为 2 Gwei/Gas，共支付 294,000 Gwei，即 0.000294 ETH。",
         note: "Gas limit 是用量上限，核账时取交易回执里的实际用量。这里的算式只覆盖主网执行费。",
         source: "ethereumGas",
+      },
+      {
+        name: "距历史最高价跌幅", english: "Drawdown from all-time high", symbol: "% from ATH", aliases: "ATH 历史高点回撤 距前高 历史最高价回撤 ATH回撤",
+        question: "当前币价比这项行情记录里的历史最高价低多少？", unit: "%",
+        meaning: "将同一来源、同一计价货币下的当前价格与截至此刻的历史最高价比较。这里用正数表示从高点跌下来的幅度。",
+        formula: "距高点跌幅 =（历史最高价 − 当前价）÷ 历史最高价 × 100%",
+        example: "代币曾到过 80 美元，现价为 60 美元，距历史高点下跌 25%。要从 60 美元回到 80 美元，则需上涨约 33.33%。",
+        note: "有的终端以负数显示相对高点的价格变化。交易场所、历史覆盖范围和报价币种也会影响高点记录。",
+        source: "cryptoAllTimeHigh",
+      },
+      {
+        name: "订单簿深度", english: "Order book depth", aliases: "盘口深度 市场深度 买盘深度 卖盘深度 MarketDepth",
+        question: "以中间价为基准，价格向上 1% 以内有多少卖单挂在那里？", unit: "计价货币",
+        meaning: "先取最佳买价与最佳卖价的中点。在一个订单簿快照中分别加总指定范围内的挂单金额，卖盘向上量，买盘向下量。",
+        formula: "1% 卖盘深度 = 卖价不超过中间价 × 1.01 的各档（卖价 × 挂单数量）之和",
+        example: "中间价为 100 USDT，101 USDT 以内只有两档卖单，100.50 挂 2 枚，101 挂 3 枚。1% 卖盘深度为 100.50 × 2 + 101 × 3 = 504 USDT。",
+        note: "主动买入消耗卖盘，主动卖出消耗买盘。撤单和新增挂单都会改变下一刻的深度。",
+        source: "orderBookDepth",
+      },
+      {
+        name: "稳定币锚定偏离率", english: "Stablecoin peg deviation", aliases: "脱锚率 稳定币脱锚 稳定币溢价 稳定币折价 Depeg",
+        question: "一枚稳定币的市价，比它锚定的目标价格高或低多少？", unit: "%",
+        meaning: "将同一计价货币下的稳定币市价与目标价比较，保留方向。正值表示溢价，负值表示折价。",
+        formula: "锚定偏离率 =（市价 − 锚定目标价）÷ 锚定目标价 × 100%",
+        example: "一枚稳定币的目标是 1 美元，市场报价为 0.992 美元，偏离率为 (0.992 − 1) ÷ 1 = −0.8%，即折价 80 bp。",
+        note: "用另一种稳定币作为报价货币时，要先换算到锚定币种。两种稳定币之间的比价同时受两者市价影响。",
+        source: "stablecoinPeg",
       },
     ],
   },
