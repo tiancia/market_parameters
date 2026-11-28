@@ -121,25 +121,20 @@ a:hover { text-decoration-thickness: 2px; }
   font-size: 1.45rem;
 }
 
-/* 市场按书口索引横排，当前一项用一道墨线标记。 */
+/* 分类按书口索引横排，当前一项用一道墨线标记。 */
 .browse-bar {
   position: sticky;
   z-index: 1;
   top: 0;
   display: flex;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  column-gap: clamp(1rem, 2.8vw, 2.75rem);
   align-items: baseline;
-  justify-content: space-between;
   border-top: 2px solid var(--ink);
   border-bottom: 1px solid var(--rule);
   background: var(--paper);
 }
-.market-filters {
-  display: flex;
-  align-items: stretch;
-  gap: clamp(1rem, 2.8vw, 2.75rem);
-}
-.market-filters button {
+.browse-bar button {
   position: relative;
   padding: 0.8rem 0.04rem 0.75rem;
   white-space: nowrap;
@@ -147,17 +142,18 @@ a:hover { text-decoration-thickness: 2px; }
   background: transparent;
   color: var(--body);
 }
-.market-filters button[aria-pressed="true"] { color: var(--purple); font-weight: 700; }
-.market-filters button[aria-pressed="true"]::after {
+.browse-bar button[aria-pressed="true"] { color: var(--purple); font-weight: 700; }
+.browse-bar button[aria-pressed="true"]::after {
   content: "";
   position: absolute;
   inset: auto 0 -1px;
   height: 3px;
   background: var(--purple);
 }
-.market-filters button:hover { color: var(--purple); }
+.browse-bar button:hover { color: var(--purple); }
 #result-count {
   flex: none;
+  margin-inline-start: auto;
   white-space: nowrap;
   font-size: 0.875rem;
   color: var(--muted);
@@ -176,7 +172,7 @@ a:hover { text-decoration-thickness: 2px; }
   grid-area: 1 / 1;
   scroll-margin-top: var(--bar-clearance);
 }
-.market-section + .market-section { margin-top: 2.7rem; }
+.category-section:not([hidden]) ~ .category-section:not([hidden]) { margin-top: 2.7rem; }
 .group-heading, .term-row {
   display: grid;
   grid-template-columns: var(--row-columns);
@@ -387,7 +383,7 @@ details[open] > summary .chevron { transform: rotate(225deg); margin-bottom: -0.
 
 @media (hover: none) and (pointer: coarse) {
   .search kbd { display: none; }
-  .term-row:active, .market-filters button:active { background: var(--tint); }
+  .term-row:active, .browse-bar button:active { background: var(--tint); }
 }
 @media (max-height: 42rem) {
   .worksheet { position: static; }
@@ -416,21 +412,20 @@ details[open] > summary .chevron { transform: rotate(225deg); margin-bottom: -0.
   .lesson-body { max-width: 32rem; padding-bottom: 1rem; }
   .specimen { margin-top: 0; }
   .specimen-window { height: 10rem; }
-  .market-filters { gap: clamp(0.8rem, 2.5vw, 1.35rem); }
+  .browse-bar { column-gap: clamp(0.8rem, 2.5vw, 1.35rem); }
   .rates { max-width: 24rem; }
 }
-@media (max-width: 40rem) {
+@media (max-width: 44rem) {
   :root { --bar-clearance: 6.4rem; }
   .masthead { display: block; padding-block: 1.65rem 1rem; }
-  .masthead h1 { font-size: clamp(2.55rem, 10.5vw, 3.4rem); }
+  .masthead h1 { font-size: clamp(1.85rem, 10vw, 3.4rem); }
   .masthead p { margin-top: 0.45rem; font-size: 0.95rem; }
   .search { margin-top: 0.8rem; border-bottom-color: transparent; }
   .search:focus-within { border-bottom-color: var(--purple); }
-  .browse-bar { gap: 0.75rem; }
-  .market-filters { flex-wrap: wrap; column-gap: 1rem; row-gap: 0; }
-  .market-filters button { min-height: 2.55rem; padding-block: 0.4rem; font-size: 0.94rem; }
+  .browse-bar { column-gap: 1rem; }
+  .browse-bar button { min-height: 2.55rem; padding-block: 0.4rem; font-size: 0.94rem; }
   #result-count { font-size: 0.78rem; }
-  .market-section + .market-section { margin-top: 2rem; }
+  .category-section:not([hidden]) ~ .category-section:not([hidden]) { margin-top: 2rem; }
   .group-heading h3 { font-size: 1.65rem; }
   .term-name strong { font-size: 1.12rem; }
   .term-row { min-height: 0; }
@@ -449,7 +444,7 @@ details[open] > summary .chevron { transform: rotate(225deg); margin-bottom: -0.
   .footer { margin-top: 2rem; }
 }
 @media (forced-colors: active) {
-  .market-filters button[aria-pressed="true"] { text-decoration: underline; }
+  .browse-bar button[aria-pressed="true"] { text-decoration: underline; }
   #bond-price { appearance: auto; }
 }
 @media (max-height: 32rem) {

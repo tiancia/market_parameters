@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="按市场查阅金融指标的定义、单位、算式与出处。">
-  <title>市场参数手册</title>
+  <meta name="description" content="离线查阅宏观经济与金融市场指标的定义、单位、算式和出处。">
+  <title>经济与市场指标手册</title>
   <link rel="stylesheet" href="styles.css">
   <script src="catalog.js" defer></script>
   <script src="app.js" defer></script>
@@ -14,21 +14,20 @@
 
   <header class="masthead page">
     <div>
-      <h1>市场参数手册</h1>
-      <p>金融行情里的名词、单位和算式。</p>
+      <h1>经济与市场指标手册</h1>
+      <p>查经济统计和金融行情的口径与算式。</p>
     </div>
     <form id="search-form" class="search" role="search">
-      <label class="visually-hidden" for="term-search">搜索参数名称、英文名或缩写</label>
+      <label class="visually-hidden" for="term-search">搜索指标的中文名、英文名或缩写</label>
       <span class="magnifier" aria-hidden="true"></span>
-      <input id="term-search" type="search" placeholder="查词条，如 P/E、点差" autocomplete="off" aria-keyshortcuts="/" aria-controls="entries" enterkeyhint="search">
+      <input id="term-search" type="search" placeholder="查词条，如 CPI、市盈率" autocomplete="off" aria-keyshortcuts="/" aria-controls="entries" enterkeyhint="search">
       <kbd id="search-key" aria-hidden="true">/</kbd>
       <button id="clear-search" class="clear-search" type="button" aria-label="清空搜索" hidden>×</button>
     </form>
   </header>
 
   <main class="page">
-    <nav class="browse-bar" aria-label="市场分类">
-      <div id="market-filters" class="market-filters" role="group" aria-label="选择市场"></div>
+    <nav class="browse-bar" aria-label="指标分类">
       <p id="result-count" role="status" aria-live="polite" aria-atomic="true"></p>
     </nav>
 
@@ -76,19 +75,19 @@
       </aside>
 
       <section class="catalog" id="catalog" tabindex="-1" aria-labelledby="catalog-title">
-        <h2 id="catalog-title" class="visually-hidden">参数索引</h2>
-        <noscript><p>请启用 JavaScript，以浏览词条、搜索参数和调整算例。</p></noscript>
+        <h2 id="catalog-title" class="visually-hidden">指标索引</h2>
+        <noscript><p>请启用 JavaScript，以浏览词条、搜索指标和调整算例。</p></noscript>
         <div id="entries"></div>
         <div class="empty-state" id="empty-state" hidden>
           <h3>没有找到这个词条</h3>
-          <p>可以换个关键词，或到全部市场里查。</p>
-          <button type="button" id="reset-filters">查看全部参数</button>
+          <p>可以换个关键词，或查看全部分类。</p>
+          <button type="button" id="reset-filters">查看全部指标</button>
         </div>
       </section>
     </div>
   </main>
   <footer class="page footer">
-    <span>词条里的价格、仓位与收益均为教学算例。</span>
+    <span>算例中的数字均为教学假设。</span>
     <a href="#term-search">回到搜索</a>
   </footer>
 
